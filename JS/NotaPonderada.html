@@ -1,0 +1,58 @@
+<!--
+Realizar programa para una web, en el cual el usuario introduce 2 notas y su valor
+ponderado (como cuando un examen vale un 30% y otro examen el 70%).
+Pulsando el botón "Calcula", la web muestra como resultado la nota media ponderada.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponderar notas</title>
+    <link rel="stylesheet" type="text/css" href="NotaPonderada.css">
+</head>
+<body>
+
+    <h2>CALCULO DE NOTAS</h2>
+
+    <form id="formulario">
+        <div>
+            <label for="nota1">Nota</label><input class="fondito" type= "number" id="nota1" name= "nota1">
+            <label for="porcentaje1">Porcentaje</label><input class="fondito" type= "number" id="porcentaje1" name= "porcentaje1">
+        </div>
+        <div id="salto">
+            <label for="nota2">Nota</label><input class="fondito" type= "number" id="nota2" name= "nota2">
+            <label for="porcentaje2">Porcentaje</label><input class="fondito" type= "number" id="porcentaje2" name= "porcentaje2">
+        </div>
+        <button type="button" id="calcular">Calcular</button>
+    </form>
+
+    <p id="entrega"></p>
+
+    <script>
+
+        function ponderarNotas(){
+
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var porcentaje1 = parseFloat(document.getElementById("porcentaje1").value);
+            var porcentaje2 = parseFloat(document.getElementById("porcentaje2").value);
+
+            var notaFinal = (nota1*porcentaje1 + nota2*porcentaje2)/ (porcentaje1+porcentaje2);
+            
+            document.getElementById("entrega").innerText= "Tu nota final con las ponderaciones es " + notaFinal;
+
+        }
+
+        var boton = document.getElementById("calcular");
+
+        boton.addEventListener("click",function(){
+
+            ponderarNotas();
+        });
+
+    </script>
+
+</body>
+</html>

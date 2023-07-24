@@ -1,0 +1,44 @@
+<!--
+    Realizar un programa en el cual se introduce un valor numérico en un FORM y como resultado 
+    se muestran el resultado de elevar el número al cuadrado y también el resultado de elevar el
+    número al cubo.
+a) Realizar con una función.
+b) Realizar con al menos, DOS funciones.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Form</title>
+</head>
+<body>
+
+    <form id="prueba2">
+        <label for = "numero">Introduce número:</label><input type = "number" id = "numero" name= "numero">
+    </form>
+    
+    <script>
+        const formulario = document.getElementById("prueba2");
+
+        formulario.addEventListener("submit",function(){
+            event.preventDefault();
+
+            const numero = parseInt(document.getElementById("numero").value);
+            
+            const resultado1 = Math.pow(numero,2);
+            const resultado2 = numero * (Math.pow(numero,2));
+
+            alert("El numero introducido elevado al cuadrado es igual a " + resultado1);
+            alert("El numero introducido elevado al cubo es igual a " + resultado2);
+
+        });
+
+        
+
+    </script>
+</html>
+</body>
+
+

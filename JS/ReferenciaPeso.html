@@ -1,0 +1,59 @@
+<!--
+    Crear programa, en una página web, donde el usuario intruduce su altura (cm), edad, sexo y peso actual. 
+    El programa responde con una referencia de peso aproximado.
+    Por ejemplo: usuario introduce 176, 22, H, 79.
+    El programa ejecuta la fórmula: 50 + ((Altura-150) / 4) *3 + (Edad - 20) /4
+    El resultado es: peso referencia = 70,5 * (0.9 si es mujer)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencia Peso</title>
+    <link rel="stylesheet" href="ReferenciaPeso.css">
+</head>
+<body>
+    <form id="formulario">
+        <label class = "saltito" for="altura">Introduce tu altura</label><input class="estiloCaja"type="number" id="altura" name="altura" placeholder="cm">
+        <label class = "saltito" for="edad">Introduce tu edad</label><input class="estiloCaja"type="number" id="edad" name="edad" placeholder="años">
+        <label class = "saltito" for="sexo">Introduce tu sexo</label><input class="estiloCaja"type="text" id="sexo" name="sexo" placeholder="H/M">
+        <label class = "saltito" for="pesoActual">Introduce tu peso actual</label><input class="estiloCaja"type="number" id="pesoActual" name="pesoActual" placeholder="kg">
+        <button type="button" id="calcular">Calcular peso referencia</button>
+    </form>
+
+        <p id="introducir"></p>
+
+    <script>
+
+            function calculaPeso(){
+                var altura = document.getElementById("altura").value;
+                var edad = document.getElementById("edad").value;
+                var sexo = document.getElementById("sexo").value;
+                var pesoActual = document.getElementById("pesoActual").value;
+
+                var pesoReferencia;
+
+                if(sexo==="H" || sexo==="h"){
+                    pesoReferencia = 50 + ((altura-150) / 4) *3 + (edad - 20) /4
+                }
+                else if(sexo==="M" || sexo==="m"){
+                    pesoReferencia = (50 + ((altura-150) / 4) *3 + (edad - 20) /4) * 0.9;
+                }
+                else{
+                    pesoReferencia = "ERROR, sexo no válido";
+                }
+
+                document.getElementById("introducir").innerText = "Su peso de referencia es igual a " + pesoReferencia;
+
+            }
+
+            var boton = document.getElementById("calcular");
+            boton.addEventListener("click", function(){
+                calculaPeso();
+            })
+
+    </script>
+</body>
+</html>

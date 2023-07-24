@@ -1,0 +1,35 @@
+<!--
+    Realizar programa en el cual el usuario introduce un valor en un FORM y por pantalla sale
+como resultado su 10%.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms 1</title>
+</head>
+<body>
+    <form id = "prueba">
+        <label for = "precio"> Precio: </label><input type = number id = "precio" name = "precio">
+    </form>
+
+    <script>
+
+        const formulario = document.getElementById("prueba");
+
+        formulario.addEventListener("submit", function(){
+            event.preventDefault();
+            const precio = parseInt(document.getElementById("precio").value)
+        
+            const resultado = precio * 0.1;
+
+            alert("El 10% del numero introducido en el formulario es: " + resultado);
+        });
+
+   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!--
+    Realizar un programa para una tienda de coches: Si el coche a la venta es un ford fiesta, el descuento es de un 5%. 
+    Si el coche a la venta es un ford focus, el descuento es del 10%. El usuario introduce el artículo (o su código)
+     y el programa saca el descuento y el precio final correspondiente por pantalla.
+
+     DATOS: El fiesta vale 15.500€ y el focus vale 16.300€ (sin descuentos)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento coches</title>
+</head>
+<body>
+<script>
+
+    var precioFiesta = 15500;
+    var precioFocus = 16300;
+    var descuento;
+    var precioFinal;
+
+    var modeloCliente = prompt("Introduce el modelo de tu coche (Fiesta o Focus)")
+
+    switch(modeloCliente){
+
+        case "Fiesta": 
+        descuento = 15500*0.05;
+        precioFinal = precioFiesta-descuento;
+
+        document.write("Has elegido el Ford Fiesta con un precio original de 15.500€, aplicamos un descuento de un 5% equivalente a "
+        + descuento + " el precio final se te queda en " + precioFinal + "€");
+        
+        break;
+
+
+        case "Focus": 
+        descuento = 16300*0.1;
+        precioFinal = precioFocus-descuento;
+
+        document.write("Has elegido el Ford Focus con un precio original de 16.300€, aplicamos un descuento de un 10% equivalente a "
+        + descuento + " el precio final se te queda en " + precioFinal + "€");
+        
+        break;
+
+
+        default: document.write("El modelo introducido no es válido, solo tiene las siguientes opciones <br> OPCION 1 : Fiesta <br> OPCION 2 : Focus")
+
+        break;
+
+    }
+
+
+</script>
+</body>
+</html>

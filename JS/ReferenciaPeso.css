@@ -1,0 +1,16 @@
+.saltito{
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#calcular{
+    margin-top: 20px;
+    display: block;
+    font-style: normal;
+    padding: 10px;
+}
+
+.estiloCaja{
+    background-color:rgb(252, 252, 160);
+}

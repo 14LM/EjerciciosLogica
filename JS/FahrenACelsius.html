@@ -1,0 +1,33 @@
+<!--
+    Hacer un programa que contenga una funcion que pase grados Fahrenheit a Celsius
+    Fórmula	
+( °F − 32) × 5 / 9 =  °C
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Fahrenheit a Celsius</title>
+</head>
+<body>
+    <script>
+
+        var gradosFahren = parseInt(prompt("Introduce los grados Fahrenheit para convertirlos a Celsius"));
+        var gradosCelsius;
+
+        function convertir(gradosFahren){
+
+            gradosCelsius = (gradosFahren - 32) * 5/9;
+
+            return gradosCelsius;
+        } 
+
+        document.write (convertir(gradosFahren));
+
+    </script>
+    
+</body>
+</html>

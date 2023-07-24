@@ -1,0 +1,36 @@
+<!--
+    Indica dos numeros y el programa detecta cual de los dos es mayor o si son iguales
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Mayor</title>
+</head>
+<body>
+    
+<script>
+
+
+    var num1= parseInt(prompt("Introduce el primer numero"));
+    var num2= parseInt(prompt("Introduce el segundo numero"));
+    var resultado;
+
+    if(num1>num2){
+        resultado = "El primer numero introducido es mayor que el segundo"
+    } else if (num2>num1){
+        resultado = "El segundo numero introducido es mayor que el primero"
+    } else if (num1===num2){
+        resultado = "Los dos numeros introducidos son iguales"
+    }else{
+        resultado = "Datos introducidos no válidos"
+    }
+
+    document.write(resultado);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+    Realizar programa en el que el usuario introduce el número del mes
+(1 al 12) y el código responde si ese mes tiene 30 o 31 dias.
+Enero tiene 31 días, febrero 29 días, marzo 31, abril 30, mayo 31, junio 30, 
+julio 31, agosto 31, septiembre 30, octubre 31, noviembre 30 y diciembre 31 días.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias mes</title>
+</head>
+<body>
+    <script>
+
+        var mes = parseInt(prompt("Introduce el número de mes que desea saber sus dias"));
+        var dias;
+
+        if(mes>=1 && mes<=12){
+        if (mes === 2) {
+            dias = 29;
+            document.write("El numero de dias del mes " + mes + " es de " + dias);
+        }
+
+        else if(mes === 4 || mes === 6 || mes === 9 || mes === 11){
+            dias = 30;
+            document.write("El numero de dias del mes " + mes + " es de " + dias);
+        }
+
+        else if (mes === 1 || mes === 3 || mes === 5 || mes === 7 || mes === 8 || mes === 10 || mes === 12){
+            dias = 31;
+            document.write("El numero de dias del mes " + mes + " es de " + dias);
+        }
+    }
+    else{
+        document.write("El mes introducido NO ES VALIDO");
+    }
+
+    </script>
+
+</body>
+</html>

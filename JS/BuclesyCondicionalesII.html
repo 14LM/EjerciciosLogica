@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTORIAL</title>
+</head>
+<body>
+    <h1>ENUNCIADO</h1>
+    <p>Crea un programa JavaScript que se ejecute en el navegador.
+        El programa pedirá introducir un no desde una ventana de prompt y calculará el factorial de dicho no.
+        El factorial de un no se representa matemáticamente con el símbolo! y es el resultado de multiplicar ese no por todos los que le preceden. Por ejemplo 5!=5x4x3x2x1, es decir, 5!=120.
+        El programa debe utilizar un bucle for para hallar el resultado y mostrar este en el documento web.
+        </p>
+
+        <h3>RESULTADO</h3>
+
+<script>
+    
+    var valor = prompt("Introduce el numero del que desea calcular el factorial");
+    var resultado;
+    
+    for (resultado = valor; valor>1;valor--){
+
+        resultado = resultado * (valor-1);
+    }
+    
+    document.write(resultado);
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForOf</title>
+</head>
+<body>
+
+    <h1>ENUNCIADO</h1>
+    <p>Crea un programa que pida mediante ventana de prompt cinco números al usuario. Almacena los números introducidos por el usuario en un array utilizando un bucle for normal. A continuación, usando un for of que recorra el array, muestra un mensaje informando del resultado en el navegador de multiplicar cada uno de los números por 5.
+    </p>
+
+    <h3>RESULTADO</h3>
+    
+<script>
+
+var numeros = [];
+
+for(i=0;i<5;i++){
+    numeros[i]= prompt("Introduce un número")
+}
+
+
+for(numero of numeros){
+    document.write("El resultado de multiplicar " + numero + " por 5 es igual " + numero*5 +  "<br>");
+}
+
+</script>
+
+</body>
+</html>
+         

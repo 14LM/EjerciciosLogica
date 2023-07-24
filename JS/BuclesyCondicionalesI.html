@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles y Condicionales</title>
+</head>
+<body>
+    <h1>ENUNCIADO</h1>
+    <p>Crea un programa JavaScript que se ejecute en el navegador.
+        El programa generará un no aleatorio entre 1 y 100 que nosotros desconocemos. El programa pedirá desde una ventana de prompt que introduzcamos un no entre 1 y 100. Si el no introducido por nosotros en la ventana de prompt es menor que el no aleatorio generado por el programa, deberá salir una ventana de alert señalando que el no es “más alto”.
+        Si por el contrario, el no introducido en la ventana de prompt es mayor que el generado por el programa, deberá salir una ventana de alert señalando que el no es “más bajo”.
+        Todo este proceso se repetirá hasta que poco a poco con las pistas de “Más alto” y “Más bajo” acertemos el no aleatorio generado por el programa. En ese momento saldrá en la página web el mensaje: “Correcto! Lo has adivinado en x intentos” donde x corresponde al no de intentos consumidos en averiguar el no.
+        </p>
+
+        <h3>RESULTADO</h3>
+
+        <script>
+
+    var aleatorio = Math.round(Math.random()*100);
+
+    var contador = 0;
+
+    var introducido = prompt("Introduce un numero entre 0 y 100");
+
+    while(introducido!=aleatorio){
+    contador++;
+
+    if(introducido<aleatorio) alert("El número es más alto");
+    if(introducido>aleatorio) alert("El número es más bajo");
+
+    introducido = prompt("Introduce un numero entre 0 y 100");
+}
+
+    document.write("Has acertado en " + contador + " intentos");
+
+        </script>
+</body>
+</html>

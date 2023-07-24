@@ -1,0 +1,43 @@
+<!--
+    Calcula la nota media de 3 notas introducidas por el usuario y dile si está aprobado (Media mayor o igual a 5)
+    o suspenso (Media menor 5)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTA MEDIA DE 3 NOTAS</title>
+</head>
+<body>
+    <script>
+
+        var nota1 = parseInt(prompt("Introduce nota 1"));
+        var nota2 = parseInt(prompt("Introduce nota 2"));
+        var nota3 = parseInt(prompt("Introduce nota 3"));
+
+        var notaMedia;
+        var veredicto;
+
+
+        function CalculoMedia (nota1, nota2, nota3){
+            notaMedia = (nota1+nota2+nota3)/3;
+            return notaMedia;
+        }
+
+        function CalculoVeredicto (notaMedia){
+            if(notaMedia>=5){
+                veredicto= "Aprobado";
+            }else{
+                veredicto= "Suspenso";
+            }
+            return veredicto;
+        }
+
+        document.write("Tu nota media es " + CalculoMedia(nota1,nota2,nota3) + 
+        " que equivale a un " +  CalculoVeredicto(CalculoMedia(nota1,nota2,nota3)));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break</title> 
+</head>
+<body>
+    <h1>ENUNCIADO</h1>
+    <p>Crea un programa que pida mediante ventanas de prompt 2 números. El programa debe mostrar los 3 primeros números primos comprendidos en el rango de los números introducidos.
+        Por ejemplo: Si introducimos como primer número un 5 y como segundo número un 20, el programa debe mostrar los 3 primeros números primos comprendidos entre 5 y 20, es decir, “5 7 11”.
+        Debes incluir en tu programa la instrucción “break”.</p>
+
+    <h3>RESULTADO</h3>
+
+        <script>
+
+            var num1 = prompt("Introduce el primer numero");
+            var num2 = prompt("Introduce el segundo numero");
+
+            function esPrimo(num){
+
+               if (num<=1){
+                return false;
+               }
+
+                for(let i=2; i<num; i++){
+
+                    if (num%i===0){
+                        return false;
+                    }
+                }
+
+                return true;
+
+               }           
+               
+               var rango;
+
+               //Había Fallado en el ParseInt ⚠️
+
+               if(parseInt(num1)<=parseInt(num2)){
+                rango = [parseInt(num1),parseInt(num2)];
+
+               }else {
+                rango = [parseInt(num2),parseInt(num1)];
+               }
+
+
+               var numerosPrimos = [];
+               var contador = 0;
+
+               for (let i = rango [0]; i<=rango[1]; i++){
+
+                if(esPrimo(i)){
+                    numerosPrimos.push(i);
+                    contador++;
+
+                    if(contador===3){
+                        break;
+                    }
+                }
+               }
+
+               document.write("Los 3 primeros números del rango introducido son " + numerosPrimos);
+         </script>
+</body>
+</html>

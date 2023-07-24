@@ -1,0 +1,40 @@
+<!--
+Realiza el programa donde se introducen 3 numeros u el programa indica cual
+es el mayor de los 3 introducidos-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <script>
+
+        var variables = [];
+
+   
+        for (var i=0; i<3; i++){
+            
+            var entrada = parseInt(prompt("Ingresa la variable " + (i+1) + ": "))
+            variables.push(entrada);
+        }
+
+        var mayor = variables[0];
+
+        if (variables[1]>mayor){
+            mayor = variables[1];
+        }
+
+        if (variables [2]>mayor){
+            mayor = variables [2];
+        }
+
+        alert("El numero mayor de los 3 es: " + mayor);
+
+
+    </script>
+
+</body>
+</html>

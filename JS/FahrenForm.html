@@ -1,0 +1,38 @@
+<!--
+    Realizar programa con introducción de datos por formulario:
+Introducimos un número °C y el programa contesta en °F (conversión Celsius- Fahrenheit )
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahren en forms</title>
+</head>
+<body>
+    <form id = "fahren">
+
+        <label for = "grados">Introduce los grados Celsius º</label><input type = "number" id = "grados" name = "grados">
+
+        <script>
+            const formulario = document.getElementById("fahren");
+
+            formulario.addEventListener("submit", function(){
+                event.preventDefault();
+                const gradosCelsius = document.getElementById("grados").value;
+                const gradosFahren = gradosCelsius * 1.8 + 32;
+
+                alert("Los grados Fahrenheit son " + gradosFahren);
+
+
+            });
+
+        </script>
+
+    </form>
+
+
+
+</body>
+</html>

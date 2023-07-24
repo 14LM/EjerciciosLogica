@@ -1,0 +1,55 @@
+<!--
+Queremos programar un juego de dados en un página web.
+El usuario empieza con 50€ para poder apostar.
+El usuario decide a que número apuesta del 1 al 6, y también que cantidad de euros quiere apostar.
+Se "lanza" un dado (asignación al azar de un número del a 1 al 6)
+Si el usuario acierta el número, gana el doble de lo que ha postado. Si no acierta, pierde todo lo apostado.
+El juego acaba cuand el usuario llega a 0 euros o al llegar a 200 euros-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    
+    <script>
+
+    var balance = 50;
+    var numeroAleatorio = Math.floor(Math.random() * 6) + 1;
+    var apuesta;
+    var respuesta;
+    var numeroApuesta = 0;
+
+    do {
+    alert("Su saldo tras la apuesta numero " + numeroApuesta + " es de " + balance);
+    apuesta = prompt("¿Qué cantidad desea apostar?");
+    respuesta = prompt("Ingrese un numero del 1-6");
+
+    if(apuesta<=balance){
+    if (respuesta>=1 && respuesta<=6){
+    if(respuesta == numeroAleatorio){
+        apuesta *=2;
+        balance +=apuesta;
+        alert("HA GANADO LA APUESTA")
+    }else{
+        balance-=apuesta;
+        alert("HA PERDIDO LA APUESTA")
+    }
+        numeroApuesta++;
+    }
+    else{alert("El numero introducido no es valido, tiene que ser entre 1-6")}
+
+    }else{alert("No tienes saldo suficiente para realizar esta apuesta")}
+
+    } while (balance > 0 && balance < 200);
+
+    document.write("EL RESUMEN DE SU JUEGO HA SIDO: <br>" + "Numero de apuestas " + numeroApuesta + "<br>" + 
+    "Balance dinero " + balance);
+
+    </script>
+    
+</body>
+</html>
