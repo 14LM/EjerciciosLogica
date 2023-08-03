@@ -1,4 +1,3 @@
-
 <!--
     Descripción: Escribe un programa en PHP que tome un array de notas 
     y realice las siguientes operaciones para obtener algunas estadísticas:
@@ -95,7 +94,7 @@ function contarAprobadas($notas){
     $aprobadas = 0;
 
     foreach($notas as $nota){
-        if($nota>70){
+        if($nota>=70){
             $aprobadas ++;
         }
     }
